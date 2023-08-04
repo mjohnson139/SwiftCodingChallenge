@@ -30,7 +30,7 @@ class ReverseTests: XCTestCase {
     func testLongString() {
         let testStr = "A quantum computer is a computer that exploits quantum mechanical phenomena"
         let actual = codingChallenge.reverse(testStr)
-        let expected = "anemonehpac laihcmeunam tunocnoc a si retupmoc taht stielpxe tunocnoc A"
+        let expected = "anemonehp lacinahcem mutnauq stiolpxe taht retupmoc a si retupmoc mutnauq A"
         XCTAssertEqual(expected, actual)
     }
 }
