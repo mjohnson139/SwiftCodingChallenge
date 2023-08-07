@@ -11,6 +11,15 @@ struct SwiftCodingChallenge {
         return "unimplemented"
     }
     
+    
+    enum FibonacciError: String, LocalizedError {
+        case negativeNumber = "Cannot accept negative numbers"
+        
+        var errorDescription: String? {
+                rawValue
+        }
+    }
+    
     func fibbonacci(_ n: Int) throws -> Int {
         // Fill out logic in this function to return the nth number of the Fibbonacci sequence.
         // Negative number results in exception with message: "Cannot accept negative numbers");

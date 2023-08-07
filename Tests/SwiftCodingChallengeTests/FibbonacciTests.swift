@@ -16,8 +16,10 @@ class FibbonacciTests: XCTestCase {
         do {
             let _ = try codingChallenge.fibbonacci(input)
             XCTFail("Should not pass here")
-        } catch let error as NSError {
+        } catch let error as SwiftCodingChallenge.FibonacciError {
             XCTAssertEqual(error.localizedDescription, expected)
+        } catch {
+            XCTFail("Unexpected error")
         }
     }
     
