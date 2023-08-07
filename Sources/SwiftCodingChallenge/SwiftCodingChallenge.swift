@@ -13,6 +13,7 @@ struct SwiftCodingChallenge {
     
     
     enum FibonacciError: String, LocalizedError {
+        case unimplemented = "Unimplemented"
         case negativeNumber = "Cannot accept negative numbers"
         
         var errorDescription: String? {
@@ -20,13 +21,13 @@ struct SwiftCodingChallenge {
         }
     }
     
-    func fibbonacci(_ n: Int) throws -> Int {
+    func fibonacci(_ n: Int) throws -> Int {
         // Fill out logic in this function to return the nth number of the Fibbonacci sequence.
         // Negative number results in exception with message: "Cannot accept negative numbers");
         // f(0) = 0
         // f(1) = 1
         // f(n) = associated fibbonacci number (for our testing, we won't do anything greater than 45).
-        return -1
+        throw FibonacciError.unimplemented
     }
     
     func fizzBuzz() -> [Int: String] {

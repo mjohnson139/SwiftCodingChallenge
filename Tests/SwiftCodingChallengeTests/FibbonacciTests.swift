@@ -14,7 +14,7 @@ class FibbonacciTests: XCTestCase {
         let expected = "Cannot accept negative numbers"
         
         do {
-            let _ = try codingChallenge.fibbonacci(input)
+            let _ = try codingChallenge.fibonacci(input)
             XCTFail("Should not pass here")
         } catch let error as SwiftCodingChallenge.FibonacciError {
             XCTAssertEqual(error.localizedDescription, expected)
@@ -28,7 +28,7 @@ class FibbonacciTests: XCTestCase {
         let expected = 0
         
         do {
-            let actual = try codingChallenge.fibbonacci(input)
+            let actual = try codingChallenge.fibonacci(input)
             XCTAssertEqual(expected, actual)
         } catch {
             XCTFail("Unexpected error occurred")
@@ -40,7 +40,7 @@ class FibbonacciTests: XCTestCase {
         let expected = 1
         
         do {
-            let actual = try codingChallenge.fibbonacci(input)
+            let actual = try codingChallenge.fibonacci(input)
             XCTAssertEqual(expected, actual)
         } catch {
             XCTFail("Unexpected error occurred")
@@ -52,7 +52,7 @@ class FibbonacciTests: XCTestCase {
         let expected = 1
         
         do {
-            let actual = try codingChallenge.fibbonacci(input)
+            let actual = try codingChallenge.fibonacci(input)
             XCTAssertEqual(expected, actual)
         } catch {
             XCTFail("Unexpected error occurred")
@@ -64,7 +64,7 @@ class FibbonacciTests: XCTestCase {
         let expected = 2
         
         do {
-            let actual = try codingChallenge.fibbonacci(input)
+            let actual = try codingChallenge.fibonacci(input)
             XCTAssertEqual(expected, actual)
         } catch {
             XCTFail("Unexpected error occurred")
@@ -76,7 +76,7 @@ class FibbonacciTests: XCTestCase {
         let expected = 610
         
         do {
-            let actual = try codingChallenge.fibbonacci(input)
+            let actual = try codingChallenge.fibonacci(input)
             XCTAssertEqual(expected, actual)
         } catch {
             XCTFail("Unexpected error occurred")
@@ -88,7 +88,7 @@ class FibbonacciTests: XCTestCase {
         let expected = 1134903170
         
         do {
-            let actual = try codingChallenge.fibbonacci(input)
+            let actual = try codingChallenge.fibonacci(input)
             XCTAssertEqual(expected, actual)
         } catch {
             XCTFail("Unexpected error occurred")
