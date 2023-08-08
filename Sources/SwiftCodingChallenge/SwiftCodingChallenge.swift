@@ -47,7 +47,7 @@ struct SwiftCodingChallenge {
     
     
     enum RomanNumerals: Error {
-        case unImplemented
+        case unimplemented
     }
     
     func convertArabicToRomanNumerals(_ n: Int) throws -> String {
@@ -79,7 +79,7 @@ struct SwiftCodingChallenge {
         // 4 = IV, 9 = IX, 40 = XL, 90 = XC, 400 = CD, 900 = CM. In the case of 4 = IV, V = 5, and I = 1, we subtract
         //  1 from 5 to get 4. In the case of 400 = CD, we have C = 100 and D = 500, and we subtract 100 from 500 to get
         //  400.
-        throw RomanNumerals.unImplemented
+        throw RomanNumerals.unimplemented
     }
 
 }
