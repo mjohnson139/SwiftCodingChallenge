@@ -1,32 +1,32 @@
-import XCTest
 @testable import SwiftCodingChallenge
+import XCTest
 
 final class RomanNumeralsTests: XCTestCase {
     var codingChallenge: SwiftCodingChallenge!
-    
+
     override func setUp() {
         super.setUp()
         codingChallenge = SwiftCodingChallenge()
     }
-    
+
     func testNegativeNumber() {
         do {
-            let _ = try codingChallenge.convertArabicToRomanNumerals(-5)
+            _ = try codingChallenge.convertArabicToRomanNumerals(-5)
             XCTFail("Should not pass here")
         } catch let error as NSError {
             XCTAssertEqual(error.localizedDescription, "Number outside of range.")
         }
     }
-    
+
     func testZero() {
         do {
-            let _ = try codingChallenge.convertArabicToRomanNumerals(0)
+            _ = try codingChallenge.convertArabicToRomanNumerals(0)
             XCTFail("Should not pass here")
         } catch let error as NSError {
             XCTAssertEqual(error.localizedDescription, "Number outside of range.")
         }
     }
-    
+
     func testLowerBound() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(1)
@@ -36,7 +36,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func testUpperBound() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(3999)
@@ -46,16 +46,16 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func testOverUpperBound() {
         do {
-            let _ = try codingChallenge.convertArabicToRomanNumerals(4000)
+            _ = try codingChallenge.convertArabicToRomanNumerals(4000)
             XCTFail("Should not pass here")
         } catch let error as NSError {
             XCTAssertEqual(error.localizedDescription, "Number outside of range.")
         }
     }
-    
+
     func test2() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(2)
@@ -65,7 +65,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test3() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(3)
@@ -75,7 +75,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test4() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(4)
@@ -85,7 +85,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test5() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(5)
@@ -95,7 +95,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test6() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(6)
@@ -105,7 +105,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test7() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(7)
@@ -115,7 +115,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test8() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(8)
@@ -125,7 +125,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test9() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(9)
@@ -135,7 +135,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test10() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(10)
@@ -145,7 +145,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test11() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(11)
@@ -155,7 +155,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test30() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(30)
@@ -165,7 +165,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test40() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(40)
@@ -175,7 +175,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test50() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(50)
@@ -185,7 +185,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test60() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(60)
@@ -195,7 +195,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test80() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(80)
@@ -205,7 +205,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test90() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(90)
@@ -215,7 +215,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test100() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(100)
@@ -225,7 +225,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test110() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(110)
@@ -235,7 +235,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test300() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(300)
@@ -245,7 +245,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test400() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(400)
@@ -255,7 +255,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test500() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(500)
@@ -265,7 +265,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test600() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(600)
@@ -275,7 +275,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test800() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(800)
@@ -285,7 +285,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test900() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(900)
@@ -295,7 +295,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test1000() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(1000)
@@ -305,7 +305,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test1100() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(1100)
@@ -315,7 +315,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test1666() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(1666)
@@ -325,7 +325,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test1990() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(1990)
@@ -335,7 +335,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test528() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(528)
@@ -345,7 +345,7 @@ final class RomanNumeralsTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
     }
-    
+
     func test42() {
         do {
             let actual = try codingChallenge.convertArabicToRomanNumerals(42)

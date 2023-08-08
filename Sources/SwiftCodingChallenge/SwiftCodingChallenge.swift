@@ -8,19 +8,18 @@ struct SwiftCodingChallenge {
         // If a single character string is passed in, return that same string (i.e.: "a" reversed is "a").
         // Every other string should be a reverse of the string passed in.
         // You cannot use str.reversed -- an algorithm to reverse the string should be implemented here.
-        return "unimplemented"
+        "unimplemented"
     }
-    
-    
+
     enum FibonacciError: String, LocalizedError {
         case unimplemented = "Unimplemented"
         case negativeNumber = "Cannot accept negative numbers"
-        
+
         var errorDescription: String? {
-                rawValue
+            rawValue
         }
     }
-    
+
     func fibonacci(_ n: Int) throws -> Int {
         // Fill out logic in this function to return the nth number of the Fibbonacci sequence.
         // Negative number results in exception with message: "Cannot accept negative numbers");
@@ -29,7 +28,7 @@ struct SwiftCodingChallenge {
         // f(n) = associated fibbonacci number (for our testing, we won't do anything greater than 45).
         throw FibonacciError.unimplemented
     }
-    
+
     func fizzBuzz() -> [Int: String] {
         // Create and return a dictionary with keys 1-100
         // If the number is divisible by 3, then the associated string will be "Fizz"
@@ -42,16 +41,14 @@ struct SwiftCodingChallenge {
         // result[3] = "Fizz"
         // result[5] = "Buzz"
         // result[15] = "FizzBuzz"
-        return [:]
+        [:]
     }
-    
-    
+
     enum RomanNumerals: Error {
         case unimplemented
     }
-    
-    func convertArabicToRomanNumerals(_ n: Int) throws -> String {
 
+    func convertArabicToRomanNumerals(_ n: Int) throws -> String {
         // Convert the integer to a roman numeral (Roman Numerals must be returned in all capitals -- i.e.: "v" is not valid, but "V" is).
         // The accepted input is 1 to 3999 inclusive.
         // If the number falls outside of that range, throw an exception with the message: "Number outside of range."
@@ -81,5 +78,4 @@ struct SwiftCodingChallenge {
         //  400.
         throw RomanNumerals.unimplemented
     }
-
 }
